@@ -195,6 +195,21 @@
         }
       ]
     },
+    "Fjordur": {
+      "LatitudeShift": 50.009388,
+      "LatitudeDivisor": 7100.0,
+      "LongitudeShift": 50.009388,
+      "LongitudeDivisor": 7100.0,
+      "Images": [
+        {
+          "FilePath": "Resources\\MapImages\\Fjordur.jpg",
+          "TopEdgeLatitude": -1.12,
+          "LeftEdgeLongitude": -2.16,
+          "RightEdgeLongitude": 100.07,
+          "BottomEdgeLatitude": 102.93
+        }
+      ]
+    },
     "Valhalla": {
       "LatitudeShift": 48.81356,
       "LatitudeDivisor": 14750.0,
@@ -224,11 +239,14 @@
       "CropPlotLarge_SM_C",
       "BP_CropPlot_Small_C",
       "BP_CropPlot_Medium_C",
-      "BP_CropPlot_Large_C"
+      "BP_CropPlot_Large_C",
+      "BP_CropPlot_SPlusTek_C"
     ],
     "StructureElectricGenerator": [
       "ElectricGenerator_C",
-      "BP_Generator_C"
+      "BP_Generator_C",
+      "BP_GeneratorTek_C",
+      "StorageBox_AEGenerator_C"
     ],
     "ItemElectricGeneratorGasoline": [
       "PrimalItemResource_Gasoline_C"

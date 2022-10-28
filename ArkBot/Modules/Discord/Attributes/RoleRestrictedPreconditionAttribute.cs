@@ -34,7 +34,7 @@ namespace ArkBot.Modules.Discord.Attributes
                     foreach (var guild in guilds)
                     {
                         var user = await guild.GetUserAsync(context.User.Id);
-                        roles.AddRange(guild.Roles.Where(x => user.RoleIds.Contains(x.Id)).Select(x => x.Name));
+                        if(user != null) roles.AddRange(guild.Roles.Where(x => user.RoleIds.Contains(x.Id)).Select(x => x.Name));
                     }
                 }
                 else

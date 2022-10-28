@@ -68,7 +68,7 @@ namespace ArkBot
         {
             // update database online state for players
             var databaseRepo = Workspace.Container?.Resolve<IDatabaseRepo>();
-            await databaseRepo.SetAllPlayersOffline().ConfigureAwait(false);
+            if(databaseRepo!=null) await databaseRepo.SetAllPlayersOffline().ConfigureAwait(false);
         }
     }
 }

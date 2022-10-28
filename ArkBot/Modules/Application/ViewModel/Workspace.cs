@@ -25,7 +25,6 @@ using Discord.WebSocket;
 using log4net;
 using log4net.Config;
 using Markdig;
-using Microsoft.AspNet.SignalR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;

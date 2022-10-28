@@ -203,6 +203,10 @@ namespace ArkBot.Modules.Application.Data.ExternalImports
                     item.Name = $"S+ {item.Name}";
                     return item;
                 }
+                else
+                {
+                    if (byClass.Length >= 1) return byClass[0];
+                }
             }
 
             return null;

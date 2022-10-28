@@ -19,6 +19,7 @@ using System;
 using System.IO;
 using System.Net;
 using System.Text;
+using SameSiteMode = Microsoft.AspNetCore.Http.SameSiteMode;
 
 namespace ArkBot.Modules.WebApp
 {

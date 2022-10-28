@@ -77,16 +77,16 @@
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Autofac.SignalR2" Version="5.0.0" />
     <PackageReference Include="CefSharp.Wpf" Version="75.1.143" />
-    <PackageReference Include="Certes" Version="2.3.3" />
-    <PackageReference Include="CoreRCON" Version="4.5.1" />
+    <PackageReference Include="Certes" Version="3.0.3" />
+    <PackageReference Include="CoreRCON" Version="5.0.5" />
     <PackageReference Include="Discord.Net" Version="2.1.1" />
-    <PackageReference Include="Fody" Version="6.1.1">
+    <PackageReference Include="Ionic.Zip" Version="1.9.1.8" />
+    <PackageReference Include="Fody" Version="6.6.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Ionic.Zip" Version="1.9.1.8" />
-    <PackageReference Include="log4net" Version="2.0.8" />
-    <PackageReference Include="Markdig" Version="0.18.0" />
+    <PackageReference Include="log4net" Version="2.0.15" />
+    <PackageReference Include="Markdig" Version="0.30.4" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Certificate" Version="3.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
@@ -97,16 +97,16 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.3" />
     <PackageReference Include="MiqM.Xceed.Wpf.Toolkit.NETCore" Version="3.4.0.1" />
-    <PackageReference Include="Nito.AsyncEx" Version="5.0.0" />
+    <PackageReference Include="Nito.AsyncEx" Version="5.1.2" />
     <PackageReference Include="Prism.Wpf" Version="7.2.0.1422" />
-    <PackageReference Include="prometheus-net" Version="3.5.0" />
-    <PackageReference Include="PropertyChanged.Fody" Version="3.2.2" />
-    <PackageReference Include="RazorLight" Version="2.0.0-beta4" />
+    <PackageReference Include="prometheus-net" Version="7.0.0" />
+    <PackageReference Include="PropertyChanged.Fody" Version="4.0.5" />
+    <PackageReference Include="RazorLight" Version="2.3.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
-    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
     <PackageReference Include="System.Management" Version="4.7.0" />
     <PackageReference Include="System.Runtime.Caching" Version="4.7.0" />
-    <PackageReference Include="Validar.Fody" Version="1.8.0" />
+    <PackageReference Include="Validar.Fody" Version="1.9.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -124,21 +124,6 @@
     </Reference>
   </ItemGroup>
 
-  <ItemGroup><!--<Reference Include="ArkSavegameToolkitNet">
-      <HintPath>..\..\ArkSavegameToolkitNet-netcore\ArkSavegameToolkitNet\bin\$(Configuration)\netcoreapp3.1\ArkSavegameToolkitNet.dll</HintPath>
-    </Reference>
-    <Reference Include="ArkSavegameToolkitNet.Domain">
-      <HintPath>..\..\ArkSavegameToolkitNet-netcore\ArkSavegameToolkitNet.Domain\bin\$(Configuration)\netcoreapp3.1\ArkSavegameToolkitNet.Domain.dll</HintPath>
-    </Reference>-->
-  
-    <Reference Include="ArkSavegameToolkitNet">
-      <HintPath>..\libs\ArkSavegameToolkitNet.dll</HintPath>
-    </Reference>
-    <Reference Include="ArkSavegameToolkitNet.Domain">
-      <HintPath>..\libs\ArkSavegameToolkitNet.Domain.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
   <ItemGroup>
     <Resource Include="arkbot.ico" />
     <Resource Include="basket_empty.ico" />
@@ -146,6 +131,9 @@
 
   <ItemGroup>
     <None Update="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="config.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="defaultconfig.json">
@@ -178,6 +166,17 @@
     <Content Include="Resources\MapImages\Genesis.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <ProjectReference Include="..\..\ArkSavegameToolkitNet\ArkSavegameToolkitNet.Domain\ArkSavegameToolkitNet.Domain.csproj" />
+    <ProjectReference Include="..\..\ArkSavegameToolkitNet\ArkSavegameToolkitNet\ArkSavegameToolkitNet.csproj" />
+    <None Update="Resources\MapImages\Fjordur.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\MapImages\Gen2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\MapImages\LostIsland.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\MapImages\Ragnarok.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
