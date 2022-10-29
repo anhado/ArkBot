@@ -190,12 +190,13 @@ namespace ArkBot.Modules.WebApp
                 });
 
                 var app2 = endpoints.CreateApplicationBuilder();
-                app2.Use(async (context, next) =>
-                {
+                 
+                app2.Run(async (context) =>
+                { 
                     // could use the static file context which supports range requests, last modified, etags etc. (but it is internal)
                     // https://github.com/dotnet/aspnetcore/blob/19d2f6124f5d04859e350d1f5a01e994e14ef1ce/src/Middleware/StaticFiles/src/StaticFileContext.cs
                     sendSpaIndexFile(context);
-
+                     
                     //var responseCompressionFeature = context.Features.Get<IHttpsCompressionFeature>();
                     //if (responseCompressionFeature != null)
                     //{

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
     <Platforms>x64</Platforms>
     <ApplicationIcon>arkbot.ico</ApplicationIcon>
@@ -22,7 +22,6 @@
     <PackageTags>bb61c4d0-0060-401b-bf8f-4747cbd86d9d</PackageTags>
     <!--<CefSharpTargetDir>.\bin</CefSharpTargetDir>-->
     <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
-    <UseWindowsForms>False</UseWindowsForms>
   </PropertyGroup>
 
   <Import Project="WebAppFiles.props" Condition="Exists('WebAppFiles.props')" />
@@ -78,16 +77,16 @@
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Autofac.SignalR2" Version="5.0.0" />
     <PackageReference Include="CefSharp.Wpf" Version="75.1.143" />
-    <PackageReference Include="Certes" Version="3.0.3" />
-    <PackageReference Include="CoreRCON" Version="5.0.5" />
-    <PackageReference Include="Discord.Net" Version="2.1.1" />
-    <PackageReference Include="Ionic.Zip" Version="1.9.1.8" />
-    <PackageReference Include="Fody" Version="6.6.4">
+    <PackageReference Include="Certes" Version="2.3.3" />
+    <PackageReference Include="CoreRCON" Version="4.5.1" />
+    <PackageReference Include="Discord.Net" Version="2.1.1" />    
+	<PackageReference Include="DotNetZip" Version="1.16.0" />
+    <PackageReference Include="Fody" Version="6.1.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="log4net" Version="2.0.15" />
-    <PackageReference Include="Markdig" Version="0.30.4" />
+    <PackageReference Include="Markdig" Version="0.18.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Certificate" Version="3.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
@@ -98,16 +97,16 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.3" />
     <PackageReference Include="MiqM.Xceed.Wpf.Toolkit.NETCore" Version="3.4.0.1" />
-    <PackageReference Include="Nito.AsyncEx" Version="5.1.2" />
+    <PackageReference Include="Nito.AsyncEx" Version="5.0.0" />
     <PackageReference Include="Prism.Wpf" Version="7.2.0.1422" />
-    <PackageReference Include="prometheus-net" Version="7.0.0" />
-    <PackageReference Include="PropertyChanged.Fody" Version="4.0.5" />
-    <PackageReference Include="RazorLight" Version="2.3.0" />
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.1" />
+    <PackageReference Include="prometheus-net" Version="3.5.0" />
+    <PackageReference Include="PropertyChanged.Fody" Version="3.2.2" />
+    <PackageReference Include="RazorLight" Version="2.0.0-beta4" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
     <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
-    <PackageReference Include="System.Management" Version="6.0.0" />
-    <PackageReference Include="System.Runtime.Caching" Version="6.0.0" />
-    <PackageReference Include="Validar.Fody" Version="1.9.0" />
+    <PackageReference Include="System.Management" Version="4.7.0" />
+    <PackageReference Include="System.Runtime.Caching" Version="4.7.0" />
+    <PackageReference Include="Validar.Fody" Version="1.8.0" />
   </ItemGroup>
 
   <ItemGroup>
