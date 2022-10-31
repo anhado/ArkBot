@@ -115,7 +115,8 @@ namespace ArkBot.Modules.WebApp.Controllers
                         TribeCount = totalTribes ?? 0,
                         LastUpdate = lastUpdateString,
                         NextUpdate = nextUpdateString,
-                        ServerStarted = serverStarted
+                        ServerStarted = serverStarted,
+                        PlayerCount= totalPlayers.Value
                     };
 
                     result.Servers.Add(serverStatusViewModel);

@@ -33,6 +33,11 @@ namespace ArkBot.Modules.Application.Data
 
             var aliases = Aliases?.FirstOrDefault(x => x.Contains(name, StringComparer.OrdinalIgnoreCase));
 
+            if (aliases == null)
+            {
+                aliases = ArkSpeciesAliases.Instance.GetAliasesByClassName(name);
+            }
+
             return aliases;
         }
 

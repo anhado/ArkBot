@@ -132,6 +132,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="aliases.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="App.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
