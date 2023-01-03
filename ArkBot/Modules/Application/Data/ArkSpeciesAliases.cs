@@ -37,6 +37,10 @@ namespace ArkBot.Modules.Application.Data
             {
                 aliases = ArkSpeciesAliases.Instance.GetAliasesByClassName(name);
             }
+            if (aliases == null)
+            {
+                var x = 123;
+            }
 
             return aliases;
         }

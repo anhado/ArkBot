@@ -381,7 +381,7 @@ export class ArkmapStructuresComponent implements OnInit, OnDestroy, OnChanges {
       this.modalInfo = undefined;
     }
 
-    destroyCurrentArea(event: string): void {
+    destroyCurrentArea(event: string): void { 
       this.httpService.adminDestroyStructuresForTeamIdAtPosition(this.serverKey, this.currentOwner.OwnerId, this.currentArea.X, this.currentArea.Y, +this.currentArea.RadiusUu + 1000 /* 10m */, 1)
       .then(response => {
           this.currentArea.Removed = true;

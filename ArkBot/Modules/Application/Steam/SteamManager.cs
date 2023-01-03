@@ -49,8 +49,20 @@ namespace ArkBot.Modules.Application.Steam
 
         private async void _rcon_OnDisconnected()
         {
-            Debug.WriteLine("Connecting rcon...");
-            await Connect();
+            bool haveerror = true;
+            while (haveerror)
+            {
+                try
+                {
+                    Debug.WriteLine("Connecting rcon...");
+                    await Connect();
+                    haveerror = false;
+                }
+                catch (Exception)
+                {
+                    haveerror = true;
+                }
+            }
         }
 
         /// <summary>
@@ -68,6 +80,11 @@ namespace ArkBot.Modules.Application.Steam
             try
             {
                 return await SendRconCommandInternal(command);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
             }
             finally
             {
@@ -101,7 +118,7 @@ namespace ArkBot.Modules.Application.Steam
             }
 
             return null;
-        }
+        } 
 
         #region IDisposable Support
         private bool disposedValue = false; // To detect redundant calls

@@ -16,7 +16,7 @@ namespace ArkBot.Modules.WebApp.Model
         public string MapName { get; set; }
         public string LastUpdate { get; set; }
         public string NextUpdate { get; set; }
-        public int OnlinePlayerCount { get; set; }
+        //public int OnlinePlayerCount { get; set; }
         public int OnlinePlayerMax { get; set; }
 
         public string InGameTime { get; set; }
